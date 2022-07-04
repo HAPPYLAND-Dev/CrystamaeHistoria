@@ -140,6 +140,10 @@ public enum ThemeType {
     private final ChatColor color;
     private final String loreLine;
 
+    public static String prefix() {
+        return "§8[§xA§E§5§2§D§4水晶§8] ";
+    }
+
     ThemeType(ChatColor color, String loreLine) {
         this.color = color;
         this.loreLine = loreLine;

@@ -80,7 +80,7 @@ public class SpiritualSilken extends RefillableUseItem {
                     block.getWorld().dropItem(block.getLocation(), new ItemStack(material));
                     damageItem(e.getPlayer(), e.getItem());
                 } else {
-                    e.getPlayer().sendMessage(ThemeType.WARNING.getColor() + "无法作用于该方块.");
+                    e.getPlayer().sendMessage(ThemeType.prefix() + ThemeType.WARNING.getColor() + "无法作用于该方块.");
                 }
             }
         };

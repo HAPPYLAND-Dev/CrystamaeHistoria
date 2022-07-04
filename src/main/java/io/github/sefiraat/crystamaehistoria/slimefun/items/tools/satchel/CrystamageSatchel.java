@@ -52,7 +52,7 @@ public class CrystamageSatchel extends UnplaceableBlock {
             final ItemStack itemStack = event.getItem();
 
             if (itemStack.getAmount() > 1) {
-                event.getPlayer().sendMessage(ThemeType.WARNING.getColor() + "你拥有堆叠的水晶收纳袋, 需要将他们分开才可以正常使用.");
+                event.getPlayer().sendMessage(ThemeType.prefix() + ThemeType.WARNING.getColor() + "你拥有堆叠的水晶收纳袋, 需要将他们分开才可以正常使用.");
                 return;
             }
 
@@ -63,7 +63,7 @@ public class CrystamageSatchel extends UnplaceableBlock {
             );
 
             if (satchelInstance == null) {
-                event.getPlayer().sendMessage(
+                event.getPlayer().sendMessage(ThemeType.prefix() + 
                     MessageFormat.format(
                         "{0}水晶收纳袋是新的，正在初始化",
                         ThemeType.WARNING.getColor()

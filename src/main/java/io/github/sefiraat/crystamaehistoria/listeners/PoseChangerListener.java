@@ -98,7 +98,7 @@ public class PoseChangerListener implements Listener {
                 ) {
                     final boolean isImbued = PersistentDataAPI.getBoolean(armorStand, ImbuedStand.KEY);
                     if (!isImbued) {
-                        player.sendMessage(IMBUED_ONLY_MESSAGE);
+                        player.sendMessage(ThemeType.prefix() + IMBUED_ONLY_MESSAGE);
                         return;
                     }
 
@@ -108,7 +108,7 @@ public class PoseChangerListener implements Listener {
                         final PoseCloner.StoredPose pose = DataTypeMethods.getCustom(itemMeta, clonedPoseKey, PersistentPoseType.TYPE);
 
                         if (pose == null) {
-                            player.sendMessage(ThemeType.WARNING.getColor() + "没有已保存的造型");
+                            player.sendMessage(ThemeType.prefix() + ThemeType.WARNING.getColor() + "没有已保存的造型");
                             return;
                         }
                         pose.applyPose(armorStand);
@@ -198,14 +198,14 @@ public class PoseChangerListener implements Listener {
                 if (isImbued) {
                     armorStand.setVisible(!armorStand.isVisible());
                 } else {
-                    player.sendMessage(IMBUED_ONLY_MESSAGE);
+                    player.sendMessage(ThemeType.prefix() + IMBUED_ONLY_MESSAGE);
                 }
                 return null;
             case STAND_SIZE:
                 if (isImbued) {
                     armorStand.setSmall(!armorStand.isSmall());
                 } else {
-                    player.sendMessage(IMBUED_ONLY_MESSAGE);
+                    player.sendMessage(ThemeType.prefix() + IMBUED_ONLY_MESSAGE);
                 }
                 return null;
             case STAND_GRAVITY:
@@ -213,7 +213,7 @@ public class PoseChangerListener implements Listener {
                     armorStand.setGravity(!armorStand.hasGravity());
                     player.sendActionBar(Component.text("重力: " + armorStand.hasGravity()));
                 } else {
-                    player.sendMessage(IMBUED_ONLY_MESSAGE);
+                    player.sendMessage(ThemeType.prefix() + IMBUED_ONLY_MESSAGE);
                 }
                 return null;
             default:

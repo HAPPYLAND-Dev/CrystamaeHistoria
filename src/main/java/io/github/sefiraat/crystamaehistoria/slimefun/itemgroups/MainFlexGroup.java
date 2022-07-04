@@ -122,7 +122,7 @@ public class MainFlexGroup extends FlexItemGroup {
                 .color(TextColor.color(175, 200, 60))
                 .clickEvent(ClickEvent.clickEvent(ClickEvent.Action.OPEN_URL, "https://slimefun-addons-wiki.guizhanss.cn/crystamae-historia/"))
                 .build();
-            player1.sendMessage(link);
+            player1.sendMessage(ThemeType.prefix() + link);
             return false;
         });
 

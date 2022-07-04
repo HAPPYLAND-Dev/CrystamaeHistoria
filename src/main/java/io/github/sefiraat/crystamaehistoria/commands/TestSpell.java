@@ -31,7 +31,7 @@ public class TestSpell extends SubCommand {
                 if (spell != null) {
                     spell.castSpell(new CastInformation((Player) sender, power));
                 } else {
-                    player.sendMessage(ThemeType.ERROR.getColor() + "法术不存在或无法释放!");
+                    player.sendMessage(ThemeType.prefix() + ThemeType.ERROR.getColor() + "法术不存在或无法释放!");
                 }
             }
         }

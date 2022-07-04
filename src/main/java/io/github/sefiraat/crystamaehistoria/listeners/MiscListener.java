@@ -30,7 +30,7 @@ public class MiscListener implements Listener {
         ItemStack itemStack = e.getItemInHand();
         if (itemStack.getType() != Material.AIR && StoryUtils.isStoried(itemStack)) {
             final Player player = e.getPlayer();
-            player.sendMessage(ThemeType.WARNING.getColor() + "该方块已充满魔法，无法再放置于世界中");
+            player.sendMessage(ThemeType.prefix() + ThemeType.WARNING.getColor() + "该方块已充满魔法，无法再放置于世界中");
             e.setCancelled(true);
         }
     }
@@ -50,7 +50,7 @@ public class MiscListener implements Listener {
                 if (StoryUtils.isStoried(item)) {
                     e.setCancelled(true);
                     for (HumanEntity viewer : e.getInventory().getViewers()) {
-                        viewer.sendMessage(ThemeType.WARNING.getColor() + "你不能使用该物品进行合成!");
+                        viewer.sendMessage(ThemeType.prefix() + ThemeType.WARNING.getColor() + "你不能使用该物品进行合成!");
                     }
                     return;
                 }

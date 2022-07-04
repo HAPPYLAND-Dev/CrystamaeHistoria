@@ -71,7 +71,7 @@ public class RecallingCrystaLattice extends SlimefunItem {
 
                 container.set(Keys.newKey("location"), DataType.LOCATION, location);
                 itemStack.setItemMeta(itemMeta);
-                player.sendMessage(
+                player.sendMessage(ThemeType.prefix() + 
                     MessageFormat.format("{0}请在聊天栏内输入该路标的名称.", ChatColor.LIGHT_PURPLE)
                 );
                 ChatUtils.awaitInput(player, s -> renameItem(s, itemStack));
@@ -101,7 +101,7 @@ public class RecallingCrystaLattice extends SlimefunItem {
                 );
             }
         } else {
-            event.getPlayer().sendMessage(
+            event.getPlayer().sendMessage(ThemeType.prefix() + 
                 MessageFormat.format("{0}请先使用Shift+右键点击来绑定一个路标.", ChatColor.RED)
             );
         }

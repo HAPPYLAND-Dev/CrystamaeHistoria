@@ -7,6 +7,7 @@ import io.github.sefiraat.crystamaehistoria.magic.spells.core.SpellCoreBuilder;
 import io.github.sefiraat.crystamaehistoria.slimefun.items.mechanisms.liquefactionbasin.RecipeSpell;
 import io.github.sefiraat.crystamaehistoria.stories.definition.StoryType;
 import io.github.sefiraat.crystamaehistoria.utils.ParticleUtils;
+import io.github.sefiraat.crystamaehistoria.utils.theme.ThemeType;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -35,7 +36,7 @@ public class Teleport extends Spell {
                 caster.teleport(teleportToLocation);
                 ParticleUtils.displayParticleEffect(caster, Particle.END_ROD, 1, 10);
             } else {
-                caster.sendMessage(CrystamaeHistoria.getInstance().getConfig().getString("messages.spells.teleport_no_suitable_location"));
+                caster.sendMessage(ThemeType.prefix() + CrystamaeHistoria.getInstance().getConfig().getString("messages.spells.teleport_no_suitable_location"));
             }
         }
     }
